@@ -17,7 +17,7 @@ export default {
       // 按钮跳转数据
       linkdata: [
         {url: 'heightpie', id: '1', txt: '3d饼状'},
-        {url: 'heightpie', id: '2', txt: '未定义'}
+        {url: 'column', id: '2', txt: '柱状图'}
       ],
       option: {},
       data: [

@@ -16,6 +16,7 @@ export default {
     }
   },
   mounted () {
+    // 实例话图表
     HighCharts.chart(this.id, this.option)
   }
 }
