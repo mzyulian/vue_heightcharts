@@ -18,21 +18,27 @@ export default {
       id: 'test',
       // 柱状图表配置
       option: {
+        // 图表类型
         chart: {
           type: 'column'
         },
+        // 大标题
         title: {
           text: '月平均降雨量'
         },
+        // 二级标题
         subtitle: {
           text: '数据来源: WorldClimate.com'
         },
+        // 设置x轴数据选项
         xAxis: {
           categories: [
             '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'
           ],
+          // 鼠标经过阴影效果
           crosshair: true
         },
+        // y轴设置选项
         yAxis: {
           min: 0,
           title: {
@@ -50,6 +56,8 @@ export default {
         plotOptions: {
           column: {
             borderWidth: 0
+            // 配置颜色选项
+            // colorByPoint: true
           }
         },
         series: [{

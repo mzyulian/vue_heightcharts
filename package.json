@@ -11,6 +11,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.5.4",
     "highcharts": "^7.0.3",
     "reset-css": "^4.0.1",
     "vue": "^2.5.2",

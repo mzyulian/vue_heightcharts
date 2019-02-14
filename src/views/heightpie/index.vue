@@ -24,6 +24,8 @@ export default {
             beta: 0
           }
         },
+        // 配置颜色选项
+        colors: ['#4c468c', '#5cc157', '#ED561B', '#DDDF00'],
         title: {
           text: '3d饼图'// 图表的标题文字
         },
