@@ -4,7 +4,7 @@
 const base = {
   // sq: 'https://xxxx111111.com/api/v1',
   // 开发mock
-  sq: 'http://127.0.0.1:9090/api/'
+  sq: 'https://www.easy-mock.com/mock/5c66198e69563f56d7240020/api'
 }
 
 export default base

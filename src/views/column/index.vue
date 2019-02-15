@@ -75,6 +75,14 @@ export default {
         }]
       }
     }
+  },
+  methods: {
+    getcolumndata () {
+      this.$api.article.articleList().then(res => { console.log(res) })
+    }
+  },
+  mounted () {
+    this.getcolumndata()
   }
 }
 </script>

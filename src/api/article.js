@@ -10,7 +10,7 @@ const article = {
   // 新闻列表
   articleList () {
   // 新闻详情,演示
-    return axios.get(`${base.sq}baasapp/BaasAppApi/getLastTxnDate`)
+    return axios.post(`${base.sq}/columndata`).then(res => { return res.data })
   },
   // 新闻详情,演示
   articleDetail (id, params) {

@@ -10,7 +10,7 @@
       class='high'
       :option='option1'
     ></x-chart>
-    <div>
+    <div class='mrb'>
       <button
         v-for='(item) in linkdata'
         :key='item.id'
@@ -201,5 +201,8 @@ export default {
 button {
   margin-right: 10px;
   cursor: pointer;
+}
+.mrb{
+  margin-bottom: 50px;
 }
 </style>
