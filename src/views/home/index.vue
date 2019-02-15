@@ -1,10 +1,22 @@
 <template>
   <div>
-      <x-chart id="highcharts"  class="high" :option="option"></x-chart>
-      <x-chart  id="high" class="high" :option="option1" ></x-chart>
-      <div>
-        <button v-for='(item) in linkdata' :key='item.id' @click='jump(item.url)'>{{item.txt}}</button>
-      </div>
+    <x-chart
+      id='highcharts'
+      class='high'
+      :option='option'
+    ></x-chart>
+    <x-chart
+      id='high'
+      class='high'
+      :option='option1'
+    ></x-chart>
+    <div>
+      <button
+        v-for='(item) in linkdata'
+        :key='item.id'
+        @click='jump(item.url)'
+      >{{item.txt}}</button>
+    </div>
   </div>
 </template>
 <script>
@@ -16,8 +28,8 @@ export default {
     return {
       // 按钮跳转数据
       linkdata: [
-        {url: 'heightpie', id: '1', txt: '3d饼状'},
-        {url: 'column', id: '2', txt: '柱状图'}
+        { url: 'heightpie', id: '1', txt: '3d饼状' },
+        { url: 'column', id: '2', txt: '柱状图' }
       ],
       option: {},
       data: [
@@ -167,6 +179,7 @@ export default {
     myvue.other.series = myvue.data // 数据
     myvue.other.yAxis.title.text = '就业人数' // 数据
     myvue.option = myvue.other
+    this.load()
   },
   components: {
     XChart
@@ -174,13 +187,18 @@ export default {
   methods: {
     jump (url) {
       // alert(url)
-      this.$router.push({name: url})
+      this.$router.push({ name: url })
+    },
+    load () {
+      this.$api.article.articleList().then(res => {
+        console.log(res)
+      })
     }
   }
 }
 </script>
 <style lang='scss'>
-button{
+button {
   margin-right: 10px;
   cursor: pointer;
 }

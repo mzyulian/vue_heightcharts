@@ -7,14 +7,16 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
+    "server": "nodemon mock/server.js",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "element-ui": "^2.5.4",
     "highcharts": "^7.0.3",
+    "qs": "^6.6.0",
     "reset-css": "^4.0.1",
+    "vant": "^1.4.10",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

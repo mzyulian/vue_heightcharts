@@ -6,9 +6,9 @@ import router from './router'
 import 'reset-css'
 import highcharts from 'highcharts'
 import highcharts3d from 'highcharts/highcharts-3d'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-Vue.use(ElementUI)
+import api from './api/index.js' // 导入api接口
+
+Vue.prototype.$api = api // 将api挂载到vue的原型上
 highcharts3d(highcharts)
 Vue.config.productionTip = false
 
